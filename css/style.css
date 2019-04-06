@@ -1,0 +1,300 @@
+  *,
+  *:focus {
+      outline: none;
+  }
+  
+  html,
+  body {
+      display: block;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      box-sizing: border-box;
+      overflow-x: hidden;
+  }
+  
+  .container-fluid {
+      overflow-x: hidden;
+  }
+  
+  .alert {
+      position: absolute;
+      border-radius: 0;
+      border-bottom-left-radius: .25rem;
+      border-bottom-right-radius: .25rem;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: -150px;
+      transition: ease-in-out 0.3s;
+      width: 60%;
+  }
+  
+  .alert.slide-down {
+      top: 0;
+  }
+  
+  .alert img {
+      position: absolute;
+      right: 15px;
+      top: -5px;
+  }
+  
+  .login-container {
+      background-color: #686868;
+      width: 450px;
+      min-height: 500px;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px;
+      padding-top: 119px;
+      box-sizing: border-box;
+      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      transition: ease-in-out 0.7s;
+  }
+  
+  .login-container.right {
+      left: 105%;
+      transform: translate(0%, -50%);
+  }
+  
+  .login-container.left {
+      left: -100%;
+      transform: translate(0%, -50%);
+  }
+  
+  .img-display .user-avatar,
+  .login-container .user-avatar {
+      background-color: #ffffff;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+  }
+  
+  .img-display .user-avatar {
+      transform: translate(-50%, -14%);
+  }
+  
+  .img-display .user-avatar .avatar-img,
+  .login-container .user-avatar .avatar-img {
+      width: 185px;
+      height: 185px;
+      border-radius: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 4%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+  }
+  
+  .img-display .user-avatar .avatar-img img {
+      width: 100%;
+  }
+  
+  .login-container label {
+      color: #00a726;
+      font-size: 18px;
+      font-weight: 500;
+  }
+  
+  .login-container .password-box,
+  .login-container .username-box {
+      height: 50px;
+      border: 2px solid #00a726;
+      transition: ease-in-out 0.4s;
+      color: #ffffff;
+  }
+  
+  .login-container .password-box:active,
+  .login-container .password-box:focus,
+  .login-container .password-box:hover,
+  .login-container .username-box:active,
+  .login-container .username-box:focus,
+  .login-container .username-box:hover {
+      height: 75px;
+      background-color: #ffffff !important;
+      color: #4a4949;
+  }
+  
+  .login-container form input[type="password"],
+  .login-container form input[type="text"] {
+      background-color: #4a4949 !important;
+      text-align: center;
+  }
+  
+  .login-container a {
+      color: #00a726;
+      font-size: 14px;
+      font-weight: 500;
+  }
+  
+  .login-container p {
+      color: #00a726;
+  }
+  
+  input.apple-switch {
+      position: relative;
+      -webkit-appearance: none;
+      outline: none;
+      width: 50px;
+      height: 30px;
+      background-color: #fff;
+      border: 1px solid #D9DADC;
+      border-radius: 50px;
+      box-shadow: inset -20px 0 0 0 #fff;
+  }
+  
+  input.apple-switch:after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      background: transparent;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  input.apple-switch:checked {
+      box-shadow: inset 20px 0 0 0 #4ed164;
+      border-color: #4ed164;
+  }
+  
+  input.apple-switch:checked:after {
+      left: 20px;
+      box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+  }
+  /* Rounded sliders */
+  
+  .slider.round {
+      border-radius: 34px;
+  }
+  
+  .slider.round:before {
+      border-radius: 50%;
+  }
+  /* registration */
+  
+  .reg-container {
+      background-color: #686868;
+      color: #00a726;
+      width: 100%;
+      max-width: 700px;
+      min-height: 500px;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: -100%;
+      transform: translate(0%, -50%);
+      padding: 15px;
+      box-sizing: border-box;
+      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      transition: ease-in-out 0.5s;
+  }
+  
+  .reg-container.right {
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .reg-container .picture-upload {
+      padding: 10px 15px;
+      height: 52px;
+  }
+  
+  .reg-container .border-danger,
+  .reg-container .border-success {
+      border-width: 2px;
+  }
+  
+  .reg-container .pass-exp {
+      background-color: #252525;
+      position: absolute;
+      padding: 15px;
+      border-radius: 5px;
+      top: -8px;
+      left: 339px;
+      width: 227px;
+      z-index: 10;
+      color: #fff;
+      transition: ease-in-out 0.3s;
+      visibility: hidden;
+      opacity: 0;
+  }
+  
+  .reg-container .pass-exp.show-exp {
+      visibility: visible;
+      opacity: 1;
+  }
+  
+  .reg-container .pass-exp h6 {
+      font-weight: 100;
+      font-size: 12px;
+      line-height: 10px;
+  }
+  
+  .reg-container .pass-exp h6::after {
+      content: "\f058";
+      font-family: 'Font Awesome\ 5 Free';
+      padding-left: 5px;
+  }
+  
+  .reg-container .pass-exp i {
+      position: absolute;
+      top: 41px;
+      left: -13px;
+      font-size: 41px;
+      color: #252525;
+  }
+  /* forgot Password */
+  
+  .forgotPass-container {
+      background-color: #686868;
+      color: #00a726;
+      width: 100%;
+      max-width: 600px;
+      min-height: 300px;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 105%;
+      transform: translate(0%, -50%);
+      padding: 15px;
+      box-sizing: border-box;
+      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      transition: ease-in-out 0.5s;
+  }
+  
+  .forgotPass-container p strong {
+      color: #000000;
+  }
+  
+  .forgotPass-container p {
+      color: #ffffff;
+  }
+  
+  .forgotPass-container.left {
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
