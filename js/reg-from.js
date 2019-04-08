@@ -257,29 +257,16 @@ function adminProcess() {
         }
     });
 
-    firstName.addEventListener('keyup', function() {
-        if (firstName.value.match(textPattern)) {
-            firstName.classList.remove('border', 'border-danger');
-        } else {
-            firstName.classList.add('border', 'border-danger');
-        }
-    });
-
-    lastName.addEventListener('keyup', function() {
-        if (lastName.value.match(textPattern)) {
-            lastName.classList.remove('border', 'border-danger');
-        } else {
-            lastName.classList.add('border', 'border-danger');
-        }
-    });
-
     profileImg.addEventListener('change', function() {
+        avatarImg.appendChild(avatar);
+        avatar.setAttribute('alt', 'profile image');
+        avatar.setAttribute('id', 'profileImg');
         for (let i = 0; i < profileImg.files.length; i++) {
             avatarPic = profileImg.files[i].name;
+            avatar.setAttribute('src', URL.createObjectURL(profileImg.files[i]));
+
+            console.log(profileImg.files[i]);
         }
-        avatarImg.appendChild(avatar);
-        avatar.setAttribute('src', 'img/' + avatarPic);
-        avatar.setAttribute('alt', 'profile image');
     });
 
     phoneInput.addEventListener('input', function(event) {
@@ -304,12 +291,6 @@ function adminProcess() {
         }
         if (addressInput.value === "") {
             addressInput.classList.add('border', 'border-danger');
-            validation = false;
-        } else {
-            validation = true;
-        }
-        if (emailInput.value.match(emailPattern)) {
-            emailInput.classList.add('border', 'border-danger');
             validation = false;
         } else {
             validation = true;

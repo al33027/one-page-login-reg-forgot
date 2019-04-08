@@ -42,9 +42,9 @@
   }
   
   .login-container {
-      background-color: #686868;
-      width: 450px;
-      min-height: 500px;
+      background-color: #ffffff;
+      width: 480px;
+      min-height: 550px;
       border-radius: 4px;
       position: absolute;
       top: 50%;
@@ -53,9 +53,9 @@
       padding: 15px;
       padding-top: 119px;
       box-sizing: border-box;
-      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
       transition: ease-in-out 0.7s;
   }
   
@@ -71,7 +71,7 @@
   
   .img-display .user-avatar,
   .login-container .user-avatar {
-      background-color: #ffffff;
+      background-color: #00a726;
       width: 200px;
       height: 200px;
       border-radius: 100%;
@@ -101,6 +101,16 @@
       transform: translate(-50%, 4%);
       -webkit-clip-path: circle(50% at 50% 50%);
       clip-path: circle(50% at 50% 50%);
+      background-color: #ffffff;
+  }
+  
+  .login-container .user-avatar .avatar-img img,
+  .img-display .user-avatar .avatar-img img {
+      width: 60%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
   }
   
   .img-display .user-avatar .avatar-img img {
@@ -134,7 +144,7 @@
   
   .login-container form input[type="password"],
   .login-container form input[type="text"] {
-      background-color: #4a4949 !important;
+      background-color: #d6d6d6 !important;
       text-align: center;
   }
   
@@ -173,8 +183,8 @@
   }
   
   input.apple-switch:checked {
-      box-shadow: inset 20px 0 0 0 #4ed164;
-      border-color: #4ed164;
+      box-shadow: inset 20px 0 0 0 #00a726;
+      border-color: #00a726;
   }
   
   input.apple-switch:checked:after {
@@ -193,21 +203,21 @@
   /* registration */
   
   .reg-container {
-      background-color: #686868;
+      background-color: #ffffff;
       color: #00a726;
       width: 100%;
-      max-width: 700px;
-      min-height: 500px;
-      border-radius: 4px;
+      max-width: 850px;
+      height: 100vh;
       position: absolute;
       top: 50%;
       left: -100%;
       transform: translate(0%, -50%);
       padding: 15px;
+      padding-top: 40px;
       box-sizing: border-box;
-      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+      -moz-box-shadow: 0px 0px 3x 0px rgba(0, 0, 0, 0.50);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
       transition: ease-in-out 0.5s;
   }
   
@@ -268,7 +278,7 @@
   /* forgot Password */
   
   .forgotPass-container {
-      background-color: #686868;
+      background-color: #ffffff;
       color: #00a726;
       width: 100%;
       max-width: 870px;
@@ -280,9 +290,9 @@
       transform: translate(0%, -50%);
       padding: 15px;
       box-sizing: border-box;
-      -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
-      box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.44);
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
       transition: ease-in-out 0.5s;
   }
   
@@ -291,7 +301,7 @@
   }
   
   .forgotPass-container p {
-      color: #ffffff;
+      color: #000000;
   }
   
   .forgotPass-container.left {
