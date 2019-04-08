@@ -223,7 +223,7 @@
   
   .reg-container .border-danger,
   .reg-container .border-success {
-      border-width: 2px;
+      border-width: 2px !important;
   }
   
   .reg-container .pass-exp {
@@ -271,7 +271,7 @@
       background-color: #686868;
       color: #00a726;
       width: 100%;
-      max-width: 600px;
+      max-width: 870px;
       min-height: 300px;
       border-radius: 4px;
       position: absolute;

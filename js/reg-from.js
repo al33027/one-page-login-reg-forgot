@@ -125,6 +125,8 @@ function adminProcess() {
     cancelBtn.addEventListener('click', function() {
         loginBox.classList.remove('right');
         regBox.classList.remove('right');
+
+        clearInp();
     });
 
     backBtn.addEventListener('click', function() {
@@ -182,7 +184,7 @@ function adminProcess() {
         speChar = document.getElementById('special-cha'),
         lengthPass = document.getElementById('pass-length');
 
-    // password validation
+    // Reg Expression
     let lowerCaseLetters = /[a-z]/g,
         upperCaseLetters = /[A-Z]/g,
         numbers = /[0-9]/g,
@@ -191,6 +193,7 @@ function adminProcess() {
         minNumbofChars = 6,
         maxNumbofChars = 16,
         emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+        textPattern = /^[A-Z][a-z]+$/,
         avatarPic = "";
 
     regPass.addEventListener('keyup', function() {
@@ -254,6 +257,22 @@ function adminProcess() {
         }
     });
 
+    firstName.addEventListener('keyup', function() {
+        if (firstName.value.match(textPattern)) {
+            firstName.classList.remove('border', 'border-danger');
+        } else {
+            firstName.classList.add('border', 'border-danger');
+        }
+    });
+
+    lastName.addEventListener('keyup', function() {
+        if (lastName.value.match(textPattern)) {
+            lastName.classList.remove('border', 'border-danger');
+        } else {
+            lastName.classList.add('border', 'border-danger');
+        }
+    });
+
     profileImg.addEventListener('change', function() {
         for (let i = 0; i < profileImg.files.length; i++) {
             avatarPic = profileImg.files[i].name;
@@ -289,7 +308,13 @@ function adminProcess() {
         } else {
             validation = true;
         }
-        if (emailInput.value.match(emailPattern) && emailInput.value === "") {
+        if (emailInput.value.match(emailPattern)) {
+            emailInput.classList.add('border', 'border-danger');
+            validation = false;
+        } else {
+            validation = true;
+        }
+        if (emailInput.value === "") {
             emailInput.classList.add('border', 'border-danger');
             validation = false;
         } else {
@@ -356,7 +381,6 @@ function adminProcess() {
                 alertMsg.classList.remove('slide-down');
                 alertMsg.classList.remove('alert-danger');
                 alertMsg.removeChild(alertH2);
-                alertMsg.removeChild(alertLoader);
             }, 3000);
         } else {
             setTimeout(function() {
@@ -397,8 +421,34 @@ function adminProcess() {
         stateInput.value = "";
         zipCode.value = "";
 
+        firstName.classList.remove('border', 'border-success');
+        lastName.classList.remove('border', 'border-success');
+        addressInput.classList.remove('border', 'border-success');
+        emailInput.classList.remove('border', 'border-success');
+        phoneInput.classList.remove('border', 'border-success');
+        cityInput.classList.remove('border', 'border-success');
+        zipCode.classList.remove('border', 'border-success');
+        stateInput.classList.remove('border', 'border-success');
+        profileImg.classList.remove('border', 'border-success');
+        avatarImg.classList.remove('border', 'border-success');
+        regUser.classList.remove('border', 'border-success');
         regPass.classList.remove('border', 'border-success');
         matchPass.classList.remove('border', 'border-success');
+
+        firstName.classList.remove('border', 'border-danger');
+        lastName.classList.remove('border', 'border-danger');
+        addressInput.classList.remove('border', 'border-danger');
+        emailInput.classList.remove('border', 'border-danger');
+        phoneInput.classList.remove('border', 'border-danger');
+        cityInput.classList.remove('border', 'border-danger');
+        zipCode.classList.remove('border', 'border-danger');
+        stateInput.classList.remove('border', 'border-danger');
+        profileImg.classList.remove('border', 'border-danger');
+        avatarImg.classList.remove('border', 'border-danger');
+        regUser.classList.remove('border', 'border-danger');
+        regPass.classList.remove('border', 'border-danger');
+        matchPass.classList.remove('border', 'border-danger');
+
         lowLetter.classList.remove('text-success');
         upLetter.classList.remove('text-success');
         upLetter.classList.remove('text-success');
