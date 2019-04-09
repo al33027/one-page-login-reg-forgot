@@ -264,8 +264,6 @@ function adminProcess() {
         for (let i = 0; i < profileImg.files.length; i++) {
             avatarPic = profileImg.files[i].name;
             avatar.setAttribute('src', URL.createObjectURL(profileImg.files[i]));
-
-            console.log(profileImg.files[i]);
         }
     });
 

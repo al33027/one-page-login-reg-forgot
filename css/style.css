@@ -45,7 +45,7 @@
       background-color: #ffffff;
       width: 480px;
       min-height: 550px;
-      border-radius: 4px;
+      border-radius: 25px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -179,17 +179,19 @@
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.2);
+      transition: ease-in-out 0.2s;
   }
   
   input.apple-switch:checked {
       box-shadow: inset 20px 0 0 0 #00a726;
       border-color: #00a726;
+      transition: ease-in-out 0.2s;
   }
   
   input.apple-switch:checked:after {
       left: 20px;
-      box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+      box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.4);
   }
   /* Rounded sliders */
   
