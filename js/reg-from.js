@@ -18,8 +18,6 @@ function adminProcess() {
     let reg = document.getElementById('regHere'),
         forgotPassBtn = document.getElementById('forgotPass'),
         cancelBtn = document.getElementById('cancel-btn'),
-        resetBtn = document.getElementById('reset-btn'),
-        backBtn = document.getElementById('back-btn'),
         loginBox = document.getElementById('login-container'),
         regBox = document.getElementById('reg-container'),
         forgotPass = document.getElementById('forgotPass-container'),
@@ -127,11 +125,6 @@ function adminProcess() {
         regBox.classList.remove('right');
 
         clearInp();
-    });
-
-    backBtn.addEventListener('click', function() {
-        loginBox.classList.remove('left');
-        forgotPass.classList.remove('left');
     });
 
     forgotPassBtn.addEventListener('click', function() {

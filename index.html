@@ -28,11 +28,11 @@
                 </div>
                 <div class="form-group text-center">
                     <label for="username"><i class="fas fa-user"></i> Username</label>
-                    <input type="text" class="form-control username-box" id="loginUser" aria-describedby="username" placeholder="Username" required>
+                    <input type="text" class="form-control username-box" id="login-user" aria-describedby="username" placeholder="Username" required>
                 </div>
                 <div class="form-group text-center">
                     <label for="password"><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" class="form-control password-box" id="loginPass" aria-describedby="password" placeholder="Password" required>
+                    <input type="password" class="form-control password-box" id="login-pass" aria-describedby="password" placeholder="Password" required>
                 </div>
                 <div class="form-group clearfix">
                     <a href="#" class="float-left" id="regHere"><i class="fas fa-plus-circle"></i> Register Here</a>
@@ -154,11 +154,11 @@
                 </p>
                 <div class="form-group">
                     <label for="Email">Email</label>
-                    <input type="email" class="form-control" id="forgot-email" placeholder="name@domain.com">
+                    <input type="email" class="form-control" id="reset-pass" placeholder="name@domain.com">
                 </div>
-                <div class="form-group text-right ">
-                    <button type="reset " id="back-btn" class="btn btn-primary ">Back</button>
-                    <button type="submit " class="btn btn-primary ">Send</button>
+                <div class="form-group text-right">
+                    <button type="reset" id="back-btn" class="btn btn-primary">Back</button>
+                    <button type="submit" id="send-email" class="btn btn-primary">Send</button>
                 </div>
             </form>
         </div>
@@ -172,6 +172,7 @@
     <!-- js -->
     <script src="/js/reg-from.js "></script>
     <script src="/js/login.js "></script>
+    <script src="/js/reset-pass.js "></script>
 </body>
 
 </html>
